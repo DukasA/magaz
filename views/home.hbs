@@ -1,0 +1,97 @@
+
+<div class="main-slider">
+    <div class="slide slide_active">
+        <img src="img/gadgets.jpg" alt="slide">
+        <div class="text-block">
+            <h2 class="block__header">Some heading here</h2>
+            <div class="block__subheader">Some subheading</div>
+            <div class="block-descr">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto, officia dignissimos optio, maxime molestiae voluptatum fugiat labore asperiores iste, laborum velit debitis nam et ex quod dolore temporibus explicabo.
+            </div>
+            <a href="/catalog"><button class="btn btn_slider">button</button></a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/fashion.jpg" alt="slide">
+        <div class="text-block">
+            <h2 class="block__header">Some heading here2</h2>
+            <div class="block__subheader">Some subheading2</div>
+            <div class="block-descr">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <a href="/catalog"><button class="btn btn_slider">button</button></a>
+        </div>
+    </div>
+    <div class="slide">
+        <img src="img/different-nationalities.jpg" alt="slide">
+        <div class="text-block">
+            <h2 class="block__header">Some heading here3</h2>
+            <div class="block__subheader">Some subheading3</div>
+            <div class="block-descr">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cum error alias id eaque facilis iste, voluptate assumenda aliquam veniam perspiciatis dolorum maiores corrupti in nihil blanditiis neque atque commodi.
+            </div>
+            <a href="/catalog"><button class="btn btn_slider">button</button></a>
+        </div>
+    </div>
+</div><!--/.main-slider-->
+<div class="categories">
+    <a href="/catalog">
+        <div class="categories__item categories__item-toys ">
+            <img src="img/different-nationalities.jpg" alt="kategory-img">
+            <div class="item-header">Игрушки</div>
+        </div>
+    </a>
+    
+    <a href="/catalog">
+        <div class="categories__item categories__item-accessories">
+            <img src="img/fashion.jpg" alt="kategory-img">
+            <div class="item-header">Аксесуары</div>
+        </div>
+    </a>
+
+    <a href="/catalog">
+        <div class="categories__item categories__item-more">
+            <div class="item-header more">Смотреть другие<br> категории</div>
+            <img src="img/more-categories.png" alt="more-categories">
+        </div>
+    </a>
+</div><!--/.categories-->
+
+<div class="top-products">
+    <h2 class="title">ТОП-товары</h2>
+    <div class="wrapper">
+        {{#if products.length}}
+            {{#each products}}
+                <a href="{{id}}">
+                    <div class="product-card">
+                    <div class="preview">
+                        <img class="preview__img" src="{{img}}" alt="{{title}}">
+                    </div>
+                    <div class="like">
+                        <img class="like__img" src="img/heart.png" alt="">
+                    </div>
+                    <div class="name">
+                        {{title}}
+                    </div>
+                    <div class="price">
+                        <div class="old-price"> {{price}} </div>
+                        <div class="new-price"> {{price}} </div>
+                    </div>
+                    <div class="rating">
+                        4.7
+                        <img class="rating__img" src="img/starImg.png" alt="star-img">
+                    </div>
+                    <div class="top">TOP</div>
+                    <div class="check">
+                        <a href="{{id}}">
+                            <img class="check__img" src="img/checkArrow.png" alt="{{title}}">
+                        </a>
+                    </div>
+                </div>
+                </a>
+            {{/each}}
+            {{else}}
+                <p>Товаров не найдено</p>
+            {{/if}}
+    </div><!--/.wrapper-->
+</div><!--/.top-products-->

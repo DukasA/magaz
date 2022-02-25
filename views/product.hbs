@@ -1,0 +1,42 @@
+<div class="product-block">
+    <div class="tabs">
+        <div class="tabs__item">
+            <img src="{{product.img}}" alt="{{product.title}}">
+        </div>
+        <div class="tabs__item">
+            <img src="{{product.img}}" alt="{{product.title}}">
+        </div>
+        <div class="tabs__item">
+            <img src="{{product.img}}" alt="{{product.title}}">
+        </div>
+        <div class="tabs__item">
+            <img src="{{product.img}}" alt="{{product.title}}">
+        </div>
+        <div class="tabs__item">
+            <img src="{{product.img}}" alt="{{product.title}}">
+        </div>
+    </div><!--/.tabs-->
+
+    <div class="preview">
+        <img src="{{product.img}}" alt="{{product.title}}">
+    </div><!--/.preview-->
+
+    <div class="product-about">
+        <div class="title">
+            {{product.title}}                        
+        </div>
+
+        <div class="price">
+            <div class="old-price">{{product.price}}</div>
+            <div class="new-price">{{product.price}}</div>
+        </div>
+
+        <form class="buttons" action="card/add" method="POST">
+            <input type="hidden" name="id" value="{{product.id}}">
+            <button type="submit" class="btn">В Корзину</button>
+            <button class="btn">Купить</button>
+        </form>
+
+    </div><!--/.product-about-->
+
+</div>

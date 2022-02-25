@@ -1,0 +1,50 @@
+<header class="header">
+<div class="header__logo">
+    <a href="/"><img src="img/InterplanetaryMall.png" alt="logo"></a>
+</div>
+<nav class="header__nav">
+    <ul class="nav-list">
+        {{#if isAbout}}
+            <li class="nav-list__item nav-list__item-active"><a href="/about">О нас</a></li>
+        {{else}}
+            <li class="nav-list__item"><a href="/about">О нас</a></li>
+        {{/if}}
+
+        {{#if isContacts}}
+            <li class="nav-list__item nav-list__item-active"><a href="/contacts">Контакты</a></li>
+        {{else}}
+            <li class="nav-list__item"><a href="/contacts">Контакты</a></li>
+        {{/if}}
+
+        {{#if isDelivery}}
+            <li class="nav-list__item nav-list__item-active"><a href="">Оплата и доставка</a></li>
+        {{else}}
+            <li class="nav-list__item"><a href="/delivery">Оплата и доставка</a></li>
+        {{/if}}
+
+        {{#if isCatalog}}
+            <li class="nav-list__item nav-list__item-active"><a href="/catalog">Каталог</a></li>
+        {{else}}
+            <li class="nav-list__item"><a href="/catalog">Каталог</a></li>
+        {{/if}}
+
+        {{#if isActions}}
+            <li class="nav-list__item nav-list__item-active"><a href="">Акции</a></li>
+        {{else}}
+            <li class="nav-list__item"><a href="/actions">Акции</a></li>
+        {{/if}}
+
+        {{#if isLike}}
+            <li class="nav-list__item nav-list__item-active"><a href=""><img src="img/like.svg" alt="like"></a></li>
+        {{else}}
+            <li class="nav-list__item"><a href="/like"><img src="img/like.svg" alt="like"></a></li>
+        {{/if}}
+
+        {{#if isCard}}
+            <li class="nav-list__item nav-list__item-active"><a href="/card"><img src="img/shopping-cart.svg" alt="shopping-cart"></a></li>
+        {{else}}
+            <li class="nav-list__item"><a href="/card"><img src="img/shopping-cart.svg" alt="shopping-cart"></a></li>
+        {{/if}}
+    </ul>
+</nav>
+</header>

@@ -1,0 +1,74 @@
+<div class="card">
+    <div class="ordered-products">
+        <a href="/catalog">Назад</a>
+        <h3>Ваши товары</h3>
+        <div class="products-container">
+            {{#if products}}
+                {{#each products}}
+                    <div id="card">
+                        <div class="product-item">
+                        <img class="product-img" src="{{img}}" alt="{{title}}">
+                        <div class="info">
+                            <div class="name">{{title}}</div>
+                            <div class="new-price">{{price}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <img src="img/plus.svg" alt="add">
+                            <div class="count"><span class="text">{{count}}</span></div>
+                            <img src="img/minus.svg" alt="remove">
+                        </div>
+                        <button class="delete js-remove" data-id="{{id}}">
+                            <img src="img/delete.png" alt="delete">
+                        </button>
+                        </div><!--/.product-item-->
+                    </div>
+                {{/each}}
+        </div><!--/.product-container-->
+
+        <div class="total">
+            <div class="text">Итого:</div>
+            <div class="new-price">{{price}}</div>
+        </div>
+            {{else}}
+                <p>Корзина пуста</p>
+            {{/if}}
+    </div>
+    <div class="order-settings">
+        <img class="cart-img" src="img/shopping-cart.svg" alt="cart">
+        <h3>Заказ</h3>
+        <div class="payment-method">
+            <div class="text">
+                Способ оплаты
+            </div>
+            <label for="card-payment">
+                <input type="checkbox" name="card-payment">
+                Оплата картой
+            </label>
+            <label for="сash-on-delivery">
+                <input type="checkbox" name="сash-on-delivery">
+                Наложеный платеж
+            </label>
+        </div><!--/.payment-method-->
+        <div class="data-inputs">
+            <form action="">
+                <label for="full-name">ФИО</label>
+                <input type="text" placeholder="Иванов Иван Иванович" name="full-name">
+
+                <label for="city">Выберите город доставки</label>
+                <input type="text" placeholder="Иванов Иван Иванович" name="city">
+
+                <label for="adres">Укажите полный адрес</label>
+                <input type="text" placeholder="Проспект/улица,дом,квартира" name="adres">
+
+                <label for="tel">Номер телефона</label>
+                <input type="number" placeholder="+(38)012 345 67 89" name="tel">
+            </form>
+        </div>
+        <div class="footer">
+            <div class="sum">
+                Сума: <span class="new-price">{{price}}</span>
+            </div>
+            <button type="submit">Оплатить</button>
+        </div>
+    </div>
+</div>

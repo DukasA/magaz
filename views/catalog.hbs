@@ -1,0 +1,95 @@
+<div class="catalog">
+    <h2>Каталог товаров</h2>
+    <aside class="aside">
+        <div class="aside__header">
+            <div class="text">Фильтры</div>
+        </div>
+        <div class="aside__filter">
+            <div class="price-text">Цена</div>
+            <input class="price-input before" type="number" name="first-price" placeholder="0">
+            <input class="price-input" type="number" name="last-price" placeholder="10000">
+            <div class="categories">
+                <div class="text">
+                    Категории
+                </div>
+                <ul class="categories__list">
+                    <li class="list-item">
+                        <label for="all">
+                            <input type="checkbox" name="all">
+                            Все
+                        </label>
+                    </li>
+                    <li class="list-item">
+                        <label for="toys">
+                            <input type="checkbox" name="toys">
+                            Игрушки
+                        </label>
+                    </li>
+                    <li class="list-item">
+                        <label for="electronic">
+                            <input type="checkbox" name="electronic">
+                            Электроника
+                        </label>
+                    </li>
+                    <li class="list-item">
+                        <label for="clothing">
+                            <input type="checkbox" name="clothing">
+                            Одежда
+                        </label>
+                    </li>
+                    <li class="list-item">
+                        <label for="accesories">
+                            <input type="checkbox" name="accesories">
+                            Аксесуары
+                        </label>
+                    </li>
+                    <li class="list-item">
+                        <label for="shoes">
+                            <input type="checkbox" name="shoes">
+                            Обувь
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <button type="submit">Применить</button>
+        </div>
+    </aside>
+
+    <div class="products">
+        <div class="wrapper">
+            {{#if products.length}}
+            {{#each products}}
+                <a href="{{id}}">
+                    <div class="product-card">
+                    <div class="preview">
+                        <img class="preview__img" src="{{img}}" alt="{{title}}">
+                    </div>
+                    <div class="like">
+                        <img class="like__img" src="img/heart.png" alt="">
+                    </div>
+                    <div class="name">
+                        {{title}}
+                    </div>
+                    <div class="price">
+                        <div class="old-price"> {{price}} </div>
+                        <div class="new-price"> {{price}} </div>
+                    </div>
+                    <div class="rating">
+                        4.7
+                        <img class="rating__img" src="img/starImg.png" alt="star-img">
+                    </div>
+                    <div class="top">TOP</div>
+                    <div class="check">
+                        <a href="{{id}}">
+                            <img class="check__img" src="img/checkArrow.png" alt="{{title}}">
+                        </a>
+                    </div>
+                </div>
+                </a>
+            {{/each}}
+            {{else}}
+                <p>Товаров не найдено</p>
+            {{/if}}
+        </div><!--/.wrapper-->
+    </div>
+</div>
